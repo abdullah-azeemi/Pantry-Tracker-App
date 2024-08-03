@@ -1,6 +1,4 @@
 .env
 venv
 .venv
-app/__pycache__
-config.py
 app/templates/static/images/
