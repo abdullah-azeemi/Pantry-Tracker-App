@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <h2>Cooking Suggestions</h2>
+        <p>Here are some recipes based on the items in your pantry:</p>
+        <div class="list-group">
+            {% for recipe in recipes %}
+                <div class="list-group-item" style="margin-bottom: 10px;">{{ recipe | safe }}</div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

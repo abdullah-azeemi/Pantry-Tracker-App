@@ -1,0 +1,19 @@
+/* app/static/css/styles.css */
+body {
+    padding-top: 56px;
+    background-color: #f8f9fa;
+}
+
+.jumbotron {
+    background: url('/static/images/pantry.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.card {
+    margin-top: 20px;
+}

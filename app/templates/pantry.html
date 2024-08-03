@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <h2>Pantry</h2>
+        <p>Add or remove items from your pantry.</p>
+        <form action="{{ url_for('add_item') }}" method="post" class="mb-3">
+            <div class="input-group">
+                <input type="text" class="form-control" id="item_name" name="item_name" placeholder="Enter item name">
+                <input type="number" class="form-control" id="item_quantity" name="item_quantity" placeholder="Item Quantity">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary">Add Item</button>
+                </div>
+            </div>
+        </form>
+        <form action="{{ url_for('remove_item') }}" method="post">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="item_name" name="item_name" placeholder="Enter item name">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-danger">Remove Item</button>
+                </div>
+            </div>
+        </form>
+        <h3>Current Pantry Items</h3>
+            <ul class="list-group">
+                {% for item in items %}
+                    <li class="list-group-item">
+                        <span class="item-name">{{ item.name }}</span>
+                        <span class="item-quantity">Quantity: {{ item.quantity }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+    </div>
+</div>
+{% endblock %}
+<style>
+ .list-group-item {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 8px 16px; 
+    border: 1px solid #ddd; 
+    margin-bottom: 4px; 
+}
+
+.item-name {
+    flex: 1; 
+}
+
+.item-quantity {
+    white-space: nowrap; 
+}
+</style>
