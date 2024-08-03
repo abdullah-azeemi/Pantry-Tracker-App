@@ -1,8 +1,11 @@
 {% extends "layout.html" %}
 {% block content %}
+
+<div class="page">
 <div class="jumbotron text-center bg-primary text-white">
     <h1 class="display-4">Welcome to Pantry Tracker</h1>
     <p class="lead">Keep track of your pantry items and get cooking suggestions based on what you have!</p>
     <a class="btn btn-light btn-lg" href="{{ url_for('signup') }}" role="button">Sign Up</a>
+</div>
 </div>
 {% endblock %}

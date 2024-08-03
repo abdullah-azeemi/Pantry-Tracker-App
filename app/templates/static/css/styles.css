@@ -1,11 +1,9 @@
-/* app/static/css/styles.css */
 body {
     padding-top: 56px;
-    background-color: #f8f9fa;
+    background-color: #e9ecef;
 }
 
 .jumbotron {
-    background: url('/static/images/pantry.jpg') no-repeat center center;
     background-size: cover;
     color: white;
 }
@@ -16,4 +14,21 @@ body {
 
 .card {
     margin-top: 20px;
+}
+
+.bg-cover {
+    background-size: cover;
+}
+
+.bg-center {
+    background-position: center;
+}
+
+.table {
+    background-color: white;
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
 }
