@@ -1,11 +1,11 @@
 from flask import Flask
-from pymongo import MongoClient
+from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from flask_bootstrap import Bootstrap
-from config import Config
 
 app = Flask(__name__)
-app.config.from_object(Config)
+app.config['SECRET_KEY'] = 'your_secret_key'
+app.config['MONGO_URI'] = 'mongodb+srv://abdullahmusharaf200:60JMTqE3R2xhRQOz@pantrytracker.itc4lrd.mongodb.net/?retryWrites=true&w=majority&appName=pantryTracker'
 
 client = MongoClient(app.config['MONGO_URI'], server_api=ServerApi('1'))
 
