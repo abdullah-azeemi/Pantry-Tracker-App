@@ -7,3 +7,4 @@ app/templates/static/images/
 app/__pycache__
 config.py
 >>>>>>> parent of 312a0f3 (Some Minor Chnages)
+.vercel
